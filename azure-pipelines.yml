@@ -15,14 +15,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
     python3 arcane.py > test.txt
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
+    git remote add origin https://github.com/AriaSalvatrice/Arcane.git
     git add test.txt
     git commit -m "Trying to commit a thing from script"
     git push origin master
-  displayName: 'Run a multi-line script'
+  displayName: 'Pushing to git'
