@@ -5,7 +5,7 @@
 
 schedules:
 - cron: "50 11 * * *"
-  displayName: Testing a thing!!
+  displayName: Daily run
   branches:
     include:
     - master
@@ -20,12 +20,12 @@ steps:
   persistCredentials: true
 
 - script: |
-    python3 arcane.py > daily.txt
+    python3 arcane.py > `date +%Y-%m-%d`.txt
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
     git config -l
     git checkout master
     git add daily.txt
-    git commit -m "Trying to commit a thing from script"
+    git commit -m "Today's commit"
     git push origin master
   displayName: 'Pushing to git'
