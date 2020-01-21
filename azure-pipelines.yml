@@ -20,6 +20,8 @@ steps:
 
 - script: |
     python3 arcane.py > test.txt
+    git config --global user.email "woof@aria.dog"
+    git config --global user.name "Aria Salvatrice"
     git add test.txt
     git commit -m "Trying to commit a thing from script"
     git push origin master
