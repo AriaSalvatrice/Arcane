@@ -23,5 +23,6 @@ steps:
     git checkout master
     git add daily.txt
     git commit -m "Trying to commit a thing from script"
-    git push https://$GITHUBPAT@github.com/AriaSalvatrice/Arcane.git
+    git -c credential.helper='!f() { echo "username=token"; echo "password=$GITHUBPAT"; };f' push $(tag)
+    git push origin master
   displayName: 'Pushing to git'
