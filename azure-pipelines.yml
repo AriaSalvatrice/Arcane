@@ -21,6 +21,8 @@ steps:
 
 - script: |
     python3 arcane.py > `date +%Y-%m-%d`.txt
+    git config --global user.email "woof@aria.dog"
+    git config --global user.name "Aria Salvatrice"
     git add `date +%Y-%m-%d`.txt
     git commit -m "Today's commit"
     git push origin master
