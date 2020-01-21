@@ -3,8 +3,10 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
+schedules:
+- cron: "0,10,20,30,40,50 * * * *"
+  displayName: Scheduled run
+  always: true
 
 pool:
   vmImage: 'ubuntu-latest'
