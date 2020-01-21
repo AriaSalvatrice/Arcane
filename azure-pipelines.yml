@@ -16,12 +16,12 @@ pool:
 
 steps:
 - script: |
-    python3 arcane.py > test.txt
+    python3 arcane.py > daily.txt
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
     git config -l
     git checkout master
-    git add test.txt
+    git add daily.txt
     git commit -m "Trying to commit a thing from script"
-    git push origin master
+    git push https://$GITHUBPAT@github.com/AriaSalvatrice/Arcane.git
   displayName: 'Pushing to git'
