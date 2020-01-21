@@ -22,5 +22,5 @@ steps:
     git config -l
     git add test.txt
     git commit -m "Trying to commit a thing from script"
-    git push origin master
+    git push origin HEAD:master
   displayName: 'Pushing to git'
