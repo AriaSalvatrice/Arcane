@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 schedules:
-- cron: "18 20 * * *"
+- cron: "50 11 * * *"
   displayName: Testing a thing!!
   branches:
     include:
@@ -19,8 +19,8 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: |
-    pwd
-    ls -la
-    which python
-    which python3
+    python3 arcane.py > test.txt
+    git add test.txt
+    git commit -m "Trying to commit a thing from script"
+    git push origin master
   displayName: 'Run a multi-line script'
