@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 schedules:
-- cron: "0,10,20,30,40,50 * * * *"
+- cron: "18 20 * * *"
   displayName: Testing a thing!!
   branches:
     include:
