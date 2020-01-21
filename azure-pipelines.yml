@@ -14,10 +14,10 @@ steps:
   persistCredentials: true
 
 - script: |
-    python3 arcane.py > `date +%Y-%m-%d`.txt
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
     git checkout master
+    python3 arcane.py > `date +%Y-%m-%d`.txt
     git add `date +%Y-%m-%d`.txt
     git commit -m "Today's commit"
     git push origin master
