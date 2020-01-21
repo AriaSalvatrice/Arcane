@@ -15,6 +15,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+
+- checkout: self
+  persistCredentials: true
+
 - script: |
     python3 arcane.py > daily.txt
     git config --global user.email "woof@aria.dog"
@@ -23,5 +27,5 @@ steps:
     git checkout master
     git add daily.txt
     git commit -m "Trying to commit a thing from script"
-    git push https://$GITHUBPAT:x-oauth-basic@github.com/AriaSalvatrice/Arcane.git master
+    git push origin master
   displayName: 'Pushing to git'
