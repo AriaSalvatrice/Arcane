@@ -17,8 +17,8 @@ steps:
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
     git checkout master
-    python3 arcane.py > `date +%Y-%m-%d`.txt
-    git add `date +%Y-%m-%d`.txt
-    git commit -m "Today's commit"
+    python3 arcane.py > v1/`date +%Y-%m-%d`.json
+    git add v1/`date +%Y-%m-%d`.json
+    git commit -m "Today's fortune ★"
     git push origin master
-  displayName: 'Pushing to git'
+  displayName: 'Pronouncing an oracle'
