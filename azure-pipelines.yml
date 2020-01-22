@@ -1,3 +1,6 @@
+trigger: none
+pr: none
+
 schedules:
 - cron: "50 11 * * *"
   displayName: Daily run
@@ -17,8 +20,8 @@ steps:
     git config --global user.email "woof@aria.dog"
     git config --global user.name "Aria Salvatrice"
     git checkout master
-    python3 arcane.py > v1/`date +%Y-%m-%d`.json
-    git add v1/`date +%Y-%m-%d`.json
+    python3 arcane.py > ./v1/`date +%Y-%m-%d`.json
+    git add ./v1/`date +%Y-%m-%d`.json
     git commit -m "Today's fortune ★"
     git push origin master
   displayName: 'Pronouncing an oracle'
