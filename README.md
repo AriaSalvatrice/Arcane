@@ -2,7 +2,7 @@
 
 This repository is both the source code and the API server of my [Arcane module](https://github.com/AriaSalvatrice/AriaVCVModules/) for VCV Rack. If you don't already know what that is, this README will not make any sense.
 
-Here's how the fortune server works: every day, at 11:50 UTC, a scheduled [Azure Pipeline](/azure-pipelines.yml) runs [arcane.py](/arcane.py), and commits its output to `/v1/YYYY-MM-DD.json`. It's run 10 minutes before the module will attempt to fetch the new fortune, to account for desynchronized clocks, and to give the pipeline the time to execute (it should take less than a minute).    
+Here's how the fortune server works: every day, at 11:50 UTC, a scheduled [Azure Pipeline](/azure-pipelines.yml) runs [arcane.coffee](/arcane.coffee), and commits its output to `/v1/YYYY-MM-DD.json`. It's run 10 minutes before the module will attempt to fetch the new fortune, to account for desynchronized clocks, and to give the pipeline the time to execute (it should take less than a minute).    
 Yeah, kind of an off-label usage of Pipelines, but I don't imagine Bill Gates gives a damn.
 
 Why are the predictions done at that hour? It's arbitrary. No matter what I choose, it won't please every single timezone. 
