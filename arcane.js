@@ -60,20 +60,53 @@
     return results;
   };
 
-  // Add them all only once starting on C
+  // Add them all only once, starting on C.
+  // Weigth of 3 means thrice as likely to appear than weight of 1.
 
-  //         CCDDEFFGGAAB Weight
-  //          # #  # # #    |
-  addScale("X X XX X X X", 1); // Test
+  // Only a small selection for now. 
+  // Once people understand what Arcane does, I'd like to have experts help me
+  // decide which ones to add, which to omit, which weights would be best.
 
-  addScale("XX XX XX  XX", 1); // Test
+  // I AM NOT SEEKING TO ADD A FULL LIST OF EVERY CONCEIVABLE SCALE EVER.
+  // Please re-read the line above.
 
-  addScale("X XX X      ", 1);
+  // I'll avoid using a lot of fancy theory words, and just explain the big idea:
+  // shoving any random shit into the quantizer should sound fun and musical to
+  // people from most countries.
 
-  addScale("X XX X   X  ", 1);
+  // Until that conversation happens, I'll start out with a very limited, 
+  // safe curation, and add more exotic scales later.
 
-  addScale("X XX X X X  ", 1);
+  // 8 notes scales
+  //         CCDDEFFGGAAB Weight  Name
+  //          # #  # # #    |      |
+  addScale("X X XX XXX X", 1); // Bebop Major
 
+  
+  // 7 notes scales
+  //         CCDDEFFGGAAB Weight  Name
+  //          # #  # # #    |      |
+  addScale("X X XX X X X", 4); // Major, Natural Minor
+
+  addScale("X XX X X X X", 1); // Melodic Minor
+
+  addScale("X XX X XX  X", 1); // Harmonic Minor
+
+  addScale("XX  XX XX X ", 1); // Spanish Gypsy
+
+  
+  // 6 notes scales
+  //         CCDDEFFGGAAB Weight  Name
+  //          # #  # # #    |      |
+  addScale("X  X XXX  X ", 1); // Minor Blues
+
+  
+  // 5 notes scales
+  //         CCDDEFFGGAAB Weight  Name
+  //          # #  # # #    |      |
+  addScale("X  X X X  X ", 1); // Minor Pentatonic
+
+  
   // Select the scale and rotate it randomly
   selectedScale = scaleTable[Math.floor(Math.random() * scaleTable.length)];
 
