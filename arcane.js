@@ -23,7 +23,7 @@
   };
 
   // Those numbers can be generated directly
-  arcana = Math.floor(Math.random() * 22);
+  arcana = Math.floor(Math.random() * 21 + 1);
 
   patternB = Math.floor(Math.random() * 65536);
 
