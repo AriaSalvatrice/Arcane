@@ -1,0 +1,20 @@
+{
+  "arcana": 18,
+  "patternB": 20495,
+  "patternC": 7040,
+  "patternD": 63078,
+  "patternE": 62714,
+  "scale": 2870,
+  "notePattern": [
+    6,
+    9,
+    7,
+    3,
+    10,
+    2,
+    0,
+    6
+    ],
+  "bpm": 116,
+  "wish": 1
+}
